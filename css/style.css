@@ -7,8 +7,9 @@
 
 body {
   font-family: "Cairo", sans-serif;
-  background: -webkit-gradient(linear, right top, left top, from(#f9d976), color-stop(#f39f86), to(#f9d976));
-  background: linear-gradient(270deg, #f9d976, #f39f86, #f9d976);
+  background: -webkit-gradient(linear, right top, left top, from(#fff), color-stop(#b2f7e2), to(#fff));
+  background: linear-gradient(270deg, #fff, #b2f7e2, #fff);
+  
   background-size: 600% 600%;
   -webkit-animation: gradientMove 30s ease infinite;
           animation: gradientMove 30s ease infinite;
@@ -39,7 +40,7 @@ body {
 }
 body::after {
   content: "";
-  background-image: url(https://raw.githubusercontent.com/minalfatih/coursat-plus-mtn-challenge/refs/heads/main/images/bg-intro.png);
+  background-image: url(../images/bg-intro.png);
   position: absolute;
   top: 0;
   left: 0;
@@ -195,7 +196,7 @@ header .container .logo img {
   bottom: -15px;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  background-color: #fff;
+  background-color: #43a047;
   height: 3px;
   border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -274,7 +275,7 @@ header .container .logo img {
   margin-bottom: 20px;
 }
 .card .container .title p {
-  color: #fbc02d;
+  color: #333;
   font-weight: 500;
   margin-bottom: 25px;
 }
