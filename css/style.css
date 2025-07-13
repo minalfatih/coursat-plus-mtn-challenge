@@ -40,14 +40,14 @@ body {
 }
 body::after {
   content: "";
-  background-image: url(../images/bg-intro.png);
+  background-image: url(https://raw.githubusercontent.com/minalfatih/coursat-plus-mtn-challenge/refs/heads/main/images/bg-intro.png);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 body.shadow::after {
   content: "";
