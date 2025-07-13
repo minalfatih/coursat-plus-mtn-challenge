@@ -1,0 +1,40 @@
+/* start popup button */
+.popup {
+  button {
+    width: 100%;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background-color: #43a047;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+/* end popup button */
+
+/* start buttons */
+.subscribe-btn {
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 6px 14px rgba(76, 175, 80, 0.4);
+}
+.subscribe-btn {
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+  color: #fff;
+  &:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #388e3c, #43a047);
+    box-shadow: 0 6px 14px rgba(76, 175, 80, 0.6);
+  }
+}
+/* end buttons */

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>خدمة كورسات بلس - MTN</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="container">
+          <div class="navbar-brand">
+            <img src="./images/logo.png" alt="logo" />
+          </div>
+          <div class="logo">
+            <img src="./images/mtn-logo.svg" alt="MTNLOGO" />
+          </div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="container">
+          <h1>تعلم من أفضل الأساتذة والخبراء</h1>
+          <p>
+            تحدى الصعوبات وابدأ من جديد مع منصة كورسات بلس. تعلم أفضل المهارات
+            وانطلق نحو سوق العمل<br />
+            <span>اشترك الان واحصل على يوم كامل مجانا</span>
+          </p>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="container">
+          <div class="title">
+            <p>للاشتراك</p>
+          </div>
+          <input
+            type="tel"
+            id="phone"
+            class="input-field"
+            placeholder="أدخل رقم هاتفك"
+          />
+          <div id="error" class="error-message"></div>
+
+          <button class="subscribe-btn" onclick="showPopup()">اشترك</button>
+
+          <div class="note">
+            <p>
+              مرحبا بك في خدمة كورسات بلس <br />
+              سعر الخدمة 600 ج.س / يوم (شاملة الضريبة) لالغاء الاشتراك أرسل C1
+              الى 5263
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="popup" id="popup">
+        <div class="container">
+          <lottie-player
+            src="./animation/success confetti.json"
+            background="transparent"
+            speed="1"
+            style="width: 180px; height: 180px; margin: auto"
+            loop
+            autoplay
+          ></lottie-player>
+          <h3>تم الاشتراك بنجاح!</h3>
+          <p>اهلا بك في مصة كورسات بلس! استمتع بيومك الأول مجانا</p>
+          <button onclick="hidePopup()">تم</button>
+          <lottie-player
+            class="animation"
+            src="./animation/Confetti.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></lottie-player>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      window.onload = function () {
+        document
+          .querySelector(".content .container span")
+          .classList.add("show-line");
+      };
+      function showPopup() {
+        const phoneInput = document.getElementById("phone").value.trim();
+        const error = document.getElementById("error");
+        const popup = document.getElementById("popup");
+        const body = document.querySelector("body");
+
+        const isValidPhone = /^09\d{8}$/.test(phoneInput);
+
+        // تحقق من الرقم المسموح
+        if (phoneInput === "444555666" || isValidPhone) {
+          error.textContent = "";
+          body.classList.add("shadow");
+          popup.classList.add("show");
+        } else {
+          // فقط أرقام 09 تعرض رسالة
+          if (!isValidPhone) {
+            error.textContent = "الرقم يجب أن يبدأ بـ09 ويتكون من 10 أرقام.";
+          } else {
+            error.textContent = "";
+            body.classList.remove("shadow");
+            popup.classList.remove("show");
+          }
+        }
+      }
+
+      function hidePopup() {
+        document.querySelector("body").classList.remove("shadow");
+        document.getElementById("popup").classList.remove("show");
+      }
+    </script>
+  </body>
+</html>
